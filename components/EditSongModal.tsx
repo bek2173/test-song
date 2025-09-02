@@ -107,7 +107,7 @@ export default function EditSongModal({ song, isOpen, onClose }: EditSongModalPr
             <Button type="button" variant="outline" onClick={onClose}>
               Cancel
             </Button>
-            <Button type="submit">Update your Songs</Button>
+            <Button type="submit">Update Songs</Button>
           </DialogFooter>
         </form>
       </DialogContent>

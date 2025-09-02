@@ -30,7 +30,7 @@ export default function SongList() {
           </svg>
         </div>
         <h3 className="mb-2 text-lg font-semibold text-foreground">No songs found</h3>
-        <p className="text-muted-foreground">Get started by adding your first song to the collection.</p>
+        <p className="text-muted-foreground">Get started by adding your first song to the collection</p>
       </div>
     )
   }
