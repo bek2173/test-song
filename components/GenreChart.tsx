@@ -56,7 +56,7 @@ export default function GenreChart({ data }: GenreChartProps) {
                 cx="50%"
                 cy="50%"
                 labelLine={false}
-                label={({ genre, percentage }) => `${genre} (${percentage?.toFixed(1)}%)`}
+                label={({ genre, percentage }: { genre: string; percentage?: number }) => `${genre} (${percentage?.toFixed(1)}%)`}
                 outerRadius={80}
                 fill="#8884d8"
                 dataKey="count"
@@ -65,7 +65,7 @@ export default function GenreChart({ data }: GenreChartProps) {
                   <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                 ))}
               </Pie>
-              <Tooltip formatter={(value, name) => [value, "Songs"]} />
+              <Tooltip formatter={(value: number, name: string) => [value, "Songs"]} />
             </PieChart>
           </ResponsiveContainer>
         </div>
