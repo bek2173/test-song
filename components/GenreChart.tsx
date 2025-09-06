@@ -33,7 +33,7 @@ export default function GenreChart({ data }: GenreChartProps) {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="flex h-64 items-center justify-center text-muted-foreground">No genre data available</div>
+          <div className="flex h-64 items-center justify-center text-muted-foreground">No genre of the data available</div>
         </CardContent>
       </Card>
     )
