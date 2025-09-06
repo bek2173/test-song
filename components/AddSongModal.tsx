@@ -41,7 +41,7 @@ export default function AddSongModal({ isOpen, onClose }: AddSongModalProps) {
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle>Add New Song</DialogTitle>
+          <DialogTitle>Add a New Song</DialogTitle>
         </DialogHeader>
 
         <form onSubmit={handleSubmit} className="space-y-4">
