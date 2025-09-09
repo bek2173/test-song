@@ -16,7 +16,7 @@ export default function ArtistChart({ data }: ArtistChartProps) {
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Users className="h-5 w-5" />
-            Top Artists by Song
+            Top Artists by their Song
           </CardTitle>
         </CardHeader>
         <CardContent>
