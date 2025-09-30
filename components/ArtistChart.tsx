@@ -20,7 +20,7 @@ export default function ArtistChart({ data }: ArtistChartProps) {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="flex h-64 items-center justify-center text-muted-foreground">No artist data available</div>
+          <div className="flex h-64 items-center justify-center text-muted-foreground">No artist data is available</div>
         </CardContent>
       </Card>
     )
