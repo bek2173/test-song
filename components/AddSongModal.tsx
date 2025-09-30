@@ -58,7 +58,7 @@ export default function AddSongModal({ isOpen, onClose }: AddSongModalProps) {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="artist">Artists *</Label>
+            <Label htmlFor="artist">Artists is *</Label>
             <Input
               id="artist"
               name="artist"
