@@ -37,7 +37,7 @@ export class ErrorBoundary extends React.Component<{ children: React.ReactNode }
             </CardHeader>
             <CardContent className="text-center">
               <p className="mb-4 text-sm text-muted-foreground">
-                An unexpected error occurred. Please try  refreshing this page
+                An unexpected error occurred. Please try refreshing this page
               </p>
               <Button onClick={() => window.location.reload()} className="gap-2">
                 <RefreshCw className="h-4 w-4" />
