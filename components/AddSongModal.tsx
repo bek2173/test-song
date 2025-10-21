@@ -46,7 +46,7 @@ export default function AddSongModal({ isOpen, onClose }: AddSongModalProps) {
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
-            <Label htmlFor="title">Title  *</Label>
+            <Label htmlFor="title">Title *</Label>
             <Input
               id="title"
               name="title"
