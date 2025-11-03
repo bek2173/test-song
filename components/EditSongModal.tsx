@@ -67,7 +67,7 @@ export default function EditSongModal({ song, isOpen, onClose }: EditSongModalPr
             />
           </div>
 
-          <div className="space-y-2">
+          <div className="space-y-2"> 
             <Label htmlFor="edit-artist">Artist *</Label>
             <Input
               id="edit-artist"
