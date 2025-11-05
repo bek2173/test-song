@@ -63,9 +63,9 @@ export default function EditSongModal({ song, isOpen, onClose }: EditSongModalPr
               value={formData.title}
               onChange={handleChange}
               placeholder="Enter song title" 
-              required
+              required 
             />
-          </div>
+          </div> 
 
           <div className="space-y-2"> 
             <Label htmlFor="edit-artist">Artist *</Label>
