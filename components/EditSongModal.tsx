@@ -58,7 +58,7 @@ export default function EditSongModal({ song, isOpen, onClose }: EditSongModalPr
           <div className="space-y-2">
             <Label htmlFor="edit-title">Title *</Label>
             <Input 
-              id="edit-title"
+              id="edit-title" 
               name="title"
               value={formData.title}
               onChange={handleChange}
