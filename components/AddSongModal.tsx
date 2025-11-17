@@ -66,7 +66,7 @@ export default function AddSongModal({ isOpen, onClose }: AddSongModalProps) {
               onChange={handleChange}
               placeholder="Enter artist name"
               required
-            />
+            /> 
           </div>
 
           <div className="space-y-2">
