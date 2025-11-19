@@ -20,7 +20,7 @@ interface EditSongModalProps {
 export default function EditSongModal({ song, isOpen, onClose }: EditSongModalProps) {
   const dispatch = useDispatch()
   const [formData, setFormData] = useState({
-    title: song.title,
+    title: song.title, 
     artist: song.artist,
     album: song.album,
     genre: song.genre,
