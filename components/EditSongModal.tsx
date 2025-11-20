@@ -26,7 +26,7 @@ export default function EditSongModal({ song, isOpen, onClose }: EditSongModalPr
     genre: song.genre,
   })
 
-  useEffect(() => {  
+  useEffect(() => {    
     setFormData({
       title: song.title,
       artist: song.artist,
