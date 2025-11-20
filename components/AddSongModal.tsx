@@ -61,7 +61,7 @@ export default function AddSongModal({ isOpen, onClose }: AddSongModalProps) {
             <Label htmlFor="artist">Artist *</Label>    
             <Input
               id="artist"
-              name="artist"  
+              name="artist"    
               value={formData.artist}
               onChange={handleChange}
               placeholder="Enter artist name"
