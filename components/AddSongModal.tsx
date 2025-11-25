@@ -60,7 +60,7 @@ export default function AddSongModal({ isOpen, onClose }: AddSongModalProps) {
           <div className="space-y-2"> 
             <Label htmlFor="artist">Artist *</Label>    
             <Input  
-              id="artist"
+              id="artist" 
               name="artist"    
               value={formData.artist}
               onChange={handleChange}
