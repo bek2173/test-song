@@ -21,9 +21,9 @@ export default function EditSongModal({ song, isOpen, onClose }: EditSongModalPr
   const dispatch = useDispatch()
   const [formData, setFormData] = useState({
     title: song.title, 
-    artist: song.artist,
+    artist: song.artist, 
     album: song.album,
-    genre: song.genre,
+    genre: song.genre,  
   }) 
 
   useEffect(() => {    
