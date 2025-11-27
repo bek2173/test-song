@@ -67,7 +67,7 @@ export default function AddSongModal({ isOpen, onClose }: AddSongModalProps) {
               placeholder="Enter artist name"
               required
             /> 
-          </div>   
+          </div>     
 
           <div className="space-y-2">
             <Label htmlFor="album">Album *</Label>
