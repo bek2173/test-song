@@ -70,7 +70,7 @@ export default function AddSongModal({ isOpen, onClose }: AddSongModalProps) {
           </div>     
 
           <div className="space-y-2">
-            <Label htmlFor="album">Album *</Label>
+            <Label htmlFor="album">Album *</Label>  
             <Input
               id="album"
               name="album"
