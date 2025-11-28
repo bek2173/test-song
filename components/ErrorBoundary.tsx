@@ -35,7 +35,7 @@ export class ErrorBoundary extends React.Component<{ children: React.ReactNode }
                 <AlertTriangle className="h-6 w-6 text-destructive" />
               </div>
               <CardTitle>Something went  wrong</CardTitle> 
-            </CardHeader>
+            </CardHeader>  
             <CardContent className="text-center">
               <p className="mb-4 text-sm text-muted-foreground">
                 An unexpected error occurred. Please try refreshing this page
