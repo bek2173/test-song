@@ -62,7 +62,7 @@ export default function AddSongModal({ isOpen, onClose }: AddSongModalProps) {
             <Input    
               id="artist" 
               name="artist"    
-              value={formData.artist}
+              value={formData.artist}   
               onChange={handleChange}
               placeholder="Enter artist name"  
               required
