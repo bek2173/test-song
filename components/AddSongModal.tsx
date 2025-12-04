@@ -64,7 +64,7 @@ export default function AddSongModal({ isOpen, onClose }: AddSongModalProps) {
               name="artist"    
               value={formData.artist}     
               onChange={handleChange}
-              placeholder="Enter artist name"  
+              placeholder="Enter artist name"     
               required
             /> 
           </div>     
