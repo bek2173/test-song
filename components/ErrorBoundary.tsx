@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { AlertTriangle, RefreshCw } from "lucide-react"
 
-interface ErrorBoundaryState {           
+interface ErrorBoundaryState {             
   hasError: boolean 
   error?: Error  
 } 
