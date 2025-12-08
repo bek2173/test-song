@@ -31,7 +31,7 @@ export default function EditSongModal({ song, isOpen, onClose }: EditSongModalPr
       title: song.title,
       artist: song.artist,   
       album: song.album,
-      genre: song.genre,
+      genre: song.genre,  
     })  
   }, [song])  
   const handleSubmit = (e: React.FormEvent) => {
