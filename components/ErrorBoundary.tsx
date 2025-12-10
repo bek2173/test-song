@@ -7,7 +7,7 @@ import { AlertTriangle, RefreshCw } from "lucide-react"
 
 interface ErrorBoundaryState {             
   hasError: boolean 
-  error?: Error  
+  error?: Error    
 } 
  
 export class ErrorBoundary extends React.Component<{ children: React.ReactNode }, ErrorBoundaryState> {
