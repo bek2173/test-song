@@ -14,7 +14,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "
 interface EditSongModalProps {  
   song: Song
   isOpen: boolean
-  onClose: () => void
+  onClose: () => void 
 }
    
 export default function EditSongModal({ song, isOpen, onClose }: EditSongModalProps) {
