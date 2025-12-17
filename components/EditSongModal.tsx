@@ -13,7 +13,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "
 
 interface EditSongModalProps {  
   song: Song
-  isOpen: boolean
+  isOpen: boolean   
   onClose: () => void   
 }
    
