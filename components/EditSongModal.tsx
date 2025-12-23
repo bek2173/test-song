@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"  
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog"
-
+  
 interface EditSongModalProps {    
   song: Song
   isOpen: boolean   
@@ -21,7 +21,7 @@ export default function EditSongModal({ song, isOpen, onClose }: EditSongModalPr
   const dispatch = useDispatch()
   const [formData, setFormData] = useState({
     title: song.title, 
-    artist: song.artist, 
+    artist: song.artist,   
     album: song.album,
     genre: song.genre,  
   }) 
