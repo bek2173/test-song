@@ -9,7 +9,7 @@ interface ErrorBoundaryState {
   hasError: boolean 
   error?: Error    
 } 
- 
+   
 export class ErrorBoundary extends React.Component<{ children: React.ReactNode }, ErrorBoundaryState> {
   constructor(props: { children: React.ReactNode }) { 
     super(props)  
