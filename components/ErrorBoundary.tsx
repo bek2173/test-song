@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { AlertTriangle, RefreshCw } from "lucide-react"   
 
 interface ErrorBoundaryState {             
-  hasError: boolean 
+  hasError: boolean   
   error?: Error    
 } 
    
