@@ -12,7 +12,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "
 
 interface AddSongModalProps {
   isOpen: boolean
-  onClose: () => void
+  onClose: () => void  
 }
   
 export default function AddSongModal({ isOpen, onClose }: AddSongModalProps) {
