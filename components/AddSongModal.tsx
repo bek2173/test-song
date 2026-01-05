@@ -11,9 +11,9 @@ import { Label } from "@/components/ui/label"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog"
 
 interface AddSongModalProps {
-  isOpen: boolean
+  isOpen: boolean  
   onClose: () => void  
-}
+}  
   
 export default function AddSongModal({ isOpen, onClose }: AddSongModalProps) {
   const dispatch = useDispatch()
