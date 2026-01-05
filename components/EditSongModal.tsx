@@ -38,7 +38,7 @@ export default function EditSongModal({ song, isOpen, onClose }: EditSongModalPr
     e.preventDefault()
     if (formData.title && formData.artist && formData.album && formData.genre) {
       dispatch(updateSongRequest({ ...song, ...formData }))
-      onClose()
+      onClose()   
     }
   }       
     
