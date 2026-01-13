@@ -22,7 +22,7 @@ export default function AddSongModal({ isOpen, onClose }: AddSongModalProps) {
     artist: "",
     album: "",
     genre: "",
-  })
+  })   
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
