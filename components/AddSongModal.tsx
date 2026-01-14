@@ -17,7 +17,7 @@ interface AddSongModalProps {
   
 export default function AddSongModal({ isOpen, onClose }: AddSongModalProps) {
   const dispatch = useDispatch()
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState({  
     title: "",
     artist: "",
     album: "",
