@@ -20,7 +20,7 @@ export default function AddSongModal({ isOpen, onClose }: AddSongModalProps) {
   const [formData, setFormData] = useState({  
     title: "",
     artist: "",
-    album: "",
+    album: "",  
     genre: "",
   })   
 
