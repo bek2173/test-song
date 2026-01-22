@@ -44,7 +44,7 @@ export default function EditSongModal({ song, isOpen, onClose }: EditSongModalPr
     
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {   
     setFormData({ ...formData, [e.target.name]: e.target.value })   
-  }  
+  }     
      
   return (  
     <Dialog open={isOpen} onOpenChange={onClose}>
