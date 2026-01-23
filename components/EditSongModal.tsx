@@ -47,7 +47,7 @@ export default function EditSongModal({ song, isOpen, onClose }: EditSongModalPr
   }     
      
   return (  
-    <Dialog open={isOpen} onOpenChange={onClose}>
+    <Dialog open={isOpen} onOpenChange={onClose}>   
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
           <DialogTitle>Edit  Song</DialogTitle>   
