@@ -11,7 +11,7 @@ interface ArtistChartProps {
 
 export default function ArtistChart({ data }: ArtistChartProps) {
   if (!data || data.length === 0) {
-    return (
+    return (  
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
