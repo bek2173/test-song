@@ -9,7 +9,7 @@ interface ArtistChartProps {
   data: ArtistStats[]
 }
 
-export default function ArtistChart({ data }: ArtistChartProps) {
+export default function ArtistChart({ data }: ArtistChartProps) {   
   if (!data || data.length === 0) {
     return (  
       <Card>
