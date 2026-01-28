@@ -34,7 +34,7 @@ export default function EditSongModal({ song, isOpen, onClose }: EditSongModalPr
       genre: song.genre,    
     })    
   }, [song])  
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {   
     e.preventDefault()
     if (formData.title && formData.artist && formData.album && formData.genre) {
       dispatch(updateSongRequest({ ...song, ...formData }))  
