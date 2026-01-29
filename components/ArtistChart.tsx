@@ -7,7 +7,7 @@ import type { ArtistStats } from "@/lib/features/stats/statsSlice"
 
 interface ArtistChartProps {
   data: ArtistStats[]
-}
+}   
 
 export default function ArtistChart({ data }: ArtistChartProps) {   
   if (!data || data.length === 0) {
