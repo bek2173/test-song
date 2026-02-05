@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Users } from "lucide-react"
 import type { ArtistStats } from "@/lib/features/stats/statsSlice"
 
-interface ArtistChartProps {
+interface ArtistChartProps {   
   data: ArtistStats[]
 }   
 
