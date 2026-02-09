@@ -6,7 +6,7 @@ import { Users } from "lucide-react"
 import type { ArtistStats } from "@/lib/features/stats/statsSlice"
 
 interface ArtistChartProps {   
-  data: ArtistStats[]
+  data: ArtistStats[]   
 }   
 
 export default function ArtistChart({ data }: ArtistChartProps) {   
