@@ -22,7 +22,7 @@ export default function EditSongModal({ song, isOpen, onClose }: EditSongModalPr
   const [formData, setFormData] = useState({
     title: song.title, 
     artist: song.artist,   
-    album: song.album,
+    album: song.album,  
     genre: song.genre,  
   }) 
 
