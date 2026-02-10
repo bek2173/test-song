@@ -1,9 +1,8 @@
-"use client"   
-    
-import type React from "react"           
-       
-import { useState } from "react"   
-import { useDispatch } from "react-redux"  
+/// <reference types="react" />
+"use client"
+
+import React, { useState } from "react"
+import { useDispatch } from "react-redux"
 import { createSongRequest } from "@/lib/features/songs/songsSlice"
 import { Button } from "@/components/ui/button"      
 import { Input } from "@/components/ui/input"       
