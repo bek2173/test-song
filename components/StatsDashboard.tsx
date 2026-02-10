@@ -8,6 +8,12 @@ import { Loader2, Music, Users, Album, Disc3 } from "lucide-react"
 import GenreChart from "./GenreChart"
 import ArtistChart from "./ArtistChart"
 
+interface ArtistStats {
+  artist: string
+  albumCount: number
+  songCount: number
+}
+
 export default function StatsDashboard() {
   const { data: stats, loading, error } = useSelector((state: RootState) => state.stats)
 
@@ -99,7 +105,7 @@ export default function StatsDashboard() {
           </CardHeader>
           <CardContent>
             <div className="space-y-3">
-              {stats.songsByArtist.slice(0, 8).map((artist, index) => (
+              {stats.songsByArtist.slice(0, 8).map((artist: ArtistStats, index: number) => (
                 <div key={artist.artist} className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-xs font-medium text-primary">
@@ -127,20 +133,29 @@ export default function StatsDashboard() {
           </CardHeader>
           <CardContent>
             <div className="space-y-3">
-              {stats.songsByAlbum.slice(0, 8).map((album, index) => (
-                <div key={`${album.album}-${album.artist}`} className="flex items-center justify-between">
+                {stats.songsByAlbum.slice(0, 8).map(
+                (
+                  album: {
+                  album: string
+                  artist: string
+                  songCount: number
+                  },
+                  index: number
+                ) => (
+                  <div key={`${album.album}-${album.artist}`} className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <div className="flex h-8 w-8 items-center justify-center rounded-full bg-chart-2/10 text-xs font-medium text-chart-2">
-                      {index + 1}
+                    {index + 1}
                     </div>
                     <div>
-                      <p className="font-medium text-foreground">{album.album}</p>
-                      <p className="text-xs text-muted-foreground">by {album.artist}</p>
+                    <p className="font-medium text-foreground">{album.album}</p>
+                    <p className="text-xs text-muted-foreground">by {album.artist}</p>
                     </div>
                   </div>
                   <Badge variant="secondary">{album.songCount} songs</Badge>
-                </div>
-              ))}
+                  </div>
+                )
+                )}
             </div>
           </CardContent>
         </Card>
@@ -156,20 +171,25 @@ export default function StatsDashboard() {
         </CardHeader>
         <CardContent>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {stats.songsByGenre.map((genre, index) => (
+            {stats.songsByGenre.map(
+              (
+              genre: { genre: string; count: number },
+              index: number
+              ) => (
               <div key={genre.genre} className="flex items-center justify-between rounded-lg border p-3">
                 <div className="flex items-center gap-3">
-                  <div
-                    className="h-3 w-3 rounded-full"
-                    style={{
-                      backgroundColor: `hsl(${(index * 137.5) % 360}, 70%, 50%)`,
-                    }}
-                  />
-                  <span className="font-medium text-foreground">{genre.genre}</span>
+                <div
+                  className="h-3 w-3 rounded-full"
+                  style={{
+                  backgroundColor: `hsl(${(index * 137.5) % 360}, 70%, 50%)`,
+                  }}
+                />
+                <span className="font-medium text-foreground">{genre.genre}</span>
                 </div>
                 <Badge variant="outline">{genre.count}</Badge>
               </div>
-            ))}
+              )
+            )}
           </div>
         </CardContent>
       </Card>

@@ -1,72 +1,73 @@
 "use client"
-    
-import type React from "react"  
-         
-import { useState, useEffect } from "react"   
+
+import React, { useState, useEffect, type FormEvent, type ChangeEvent } from "react"
 import { useDispatch } from "react-redux"
 import { updateSongRequest } from "@/lib/features/songs/songsSlice"
 import type { Song } from "@/lib/features/songs/songsSlice"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"  
-import { Label } from "@/components/ui/label"  
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog"
-  
-interface EditSongModalProps {    
-  song: Song
-  isOpen: boolean   
-  onClose: () => void      
-}
-   
-export default function EditSongModal({ song, isOpen, onClose }: EditSongModalProps) {
-  const dispatch = useDispatch()
-  const [formData, setFormData] = useState({
-    title: song.title, 
-    artist: song.artist,   
-    album: song.album,  
-    genre: song.genre,  
-  }) 
 
-  useEffect(() => {      
-    setFormData({
-      title: song.title,      
-      artist: song.artist,   
-      album: song.album,
-      genre: song.genre,      
-    })    
-  }, [song])  
-  const handleSubmit = (e: React.FormEvent) => {   
+interface EditSongModalProps {
+  song?: Song
+  isOpen: boolean
+  onClose: () => void
+}
+
+export default function EditSongModal({ song, isOpen, onClose }: EditSongModalProps) {
+  const dispatch = useDispatch() as any
+  const [formData, setFormData] = useState({
+    title: song?.title ?? "",
+    artist: song?.artist ?? "",
+    album: song?.album ?? "",
+    genre: song?.genre ?? "",
+  })
+
+  useEffect(() => {
+    if (song) {
+      setFormData({
+        title: song.title,
+        artist: song.artist,
+        album: song.album,
+        genre: song.genre,
+      })
+    }
+  }, [song])
+
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
     if (formData.title && formData.artist && formData.album && formData.genre) {
-      dispatch(updateSongRequest({ ...song, ...formData }))  
-      onClose()     
-    }     
-  }          
-       
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {         
-    setFormData({ ...formData, [e.target.name]: e.target.value })     
-  }     
-     
-  return (  
-    <Dialog open={isOpen} onOpenChange={onClose}>   
+      dispatch(updateSongRequest({ ...(song ?? {}), ...formData }))
+      onClose()
+    }
+  }
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value })
+  }
+
+  return (
+    <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle>Edit  Song</DialogTitle>   
+          <DialogTitle>Edit Song</DialogTitle>
         </DialogHeader>
-   
-        <form onSubmit={handleSubmit} className="space-y-4">  
-          <div className="space-y-2">       
+
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div className="space-y-2">
             <Label htmlFor="edit-title">Title *</Label>
-            <Input      
-              id="edit-title"  
+            <Input
+              id="edit-title"
               name="title"
               value={formData.title}
               onChange={handleChange}
-              placeholder="Enter song title"    
-              required 
+              placeholder="Enter song title"
+              required
             />
-          </div> 
+          </div>
 
-          <div className="space-y-2"> 
+          <div className="space-y-2">
             <Label htmlFor="edit-artist">Artist *</Label>
             <Input
               id="edit-artist"
@@ -106,7 +107,7 @@ export default function EditSongModal({ song, isOpen, onClose }: EditSongModalPr
             <Button type="button" variant="outline" onClick={onClose}>
               Cancel
             </Button>
-            <Button type="submit">Update your Songs</Button>
+            <Button type="submit">Update Song</Button>
           </DialogFooter>
         </form>
       </DialogContent>

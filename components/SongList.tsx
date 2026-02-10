@@ -5,6 +5,18 @@ import type { RootState } from "@/lib/store"
 import SongCard from "./SongCard"
 import { Loader2 } from "lucide-react"
 
+// Define the Song type if not already defined elsewhere
+type Song = {
+  _id: string
+  title: string
+  artist: string
+  album: string
+  genre: string
+  createdAt: string
+  updatedAt: string
+  // Add any other required properties here, e.g. year, duration, etc.
+}
+
 export default function SongList() {
   const { songs, loading } = useSelector((state: RootState) => state.songs)
 
@@ -37,8 +49,8 @@ export default function SongList() {
 
   return (
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-      {songs.map((song) => (
-        <SongCard key={song._id} song={song} />
+      {songs.map((song: Song) => (
+      <SongCard key={song._id} song={song} />
       ))}
     </div>
   )

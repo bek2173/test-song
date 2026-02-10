@@ -1,27 +1,27 @@
 /// <reference types="react" />
 "use client"
 
-import React, { useState } from "react"
+import React, { useState, type ChangeEvent } from "react"
 import { useDispatch } from "react-redux"
-import { createSongRequest } from "@/lib/features/songs/songsSlice"   
-import { Button } from "@/components/ui/button"      
-import { Input } from "@/components/ui/input"       
-import { Label } from "@/components/ui/label"      
+import { createSongRequest } from "@/lib/features/songs/songsSlice"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog"
 
-interface AddSongModalProps {   
-  isOpen: boolean    
-  onClose: () => void  
-}    
-  
+interface AddSongModalProps {
+  isOpen: boolean
+  onClose: () => void
+}
+
 export default function AddSongModal({ isOpen, onClose }: AddSongModalProps) {
-  const dispatch = useDispatch()
-  const [formData, setFormData] = useState({  
+  const dispatch = useDispatch<any>()
+  const [formData, setFormData] = useState({
     title: "",
     artist: "",
-    album: "",  
+    album: "",
     genre: "",
-  })   
+  })
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -32,13 +32,13 @@ export default function AddSongModal({ isOpen, onClose }: AddSongModalProps) {
     }
   }
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-md"> 
+      <DialogContent className="sm:max-w-md">
         <DialogHeader>
           <DialogTitle>Add a New Song</DialogTitle>
         </DialogHeader>
@@ -51,24 +51,24 @@ export default function AddSongModal({ isOpen, onClose }: AddSongModalProps) {
               name="title"
               value={formData.title}
               onChange={handleChange}
-              placeholder="Enter song title"  
+              placeholder="Enter song title"
               required
             />
-          </div> 
-          <div className="space-y-2">     
-            <Label htmlFor="artist">Artist *</Label>    
-            <Input      
-              id="artist" 
-              name="artist"    
-              value={formData.artist}     
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor="artist">Artist *</Label>
+            <Input
+              id="artist"
+              name="artist"
+              value={formData.artist}
               onChange={handleChange}
-              placeholder="Enter artist name"     
+              placeholder="Enter artist name"
               required
-            /> 
-          </div>     
+            />
+          </div>
 
           <div className="space-y-2">
-            <Label htmlFor="album">Album *</Label>  
+            <Label htmlFor="album">Album *</Label>
             <Input
               id="album"
               name="album"

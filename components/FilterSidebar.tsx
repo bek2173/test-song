@@ -16,9 +16,22 @@ export default function FilterSidebar() {
   const [localFilters, setLocalFilters] = useState(filters)
 
   // Get unique values for filter options
-  const uniqueGenres = [...new Set(songs.map((song) => song.genre))].sort()
-  const uniqueArtists = [...new Set(songs.map((song) => song.artist))].sort()
-  const uniqueAlbums = [...new Set(songs.map((song) => song.album))].sort()
+  interface Song {
+    genre: string
+    artist: string
+    album: string
+    [key: string]: any
+  }
+
+  interface Filters {
+    genre: string
+    artist: string
+    album: string
+  }
+
+  const uniqueGenres: string[] = [...new Set((songs as Song[]).map((song: Song) => song.genre))].sort()
+  const uniqueArtists: string[] = [...new Set((songs as Song[]).map((song: Song) => song.artist))].sort()
+  const uniqueAlbums: string[] = [...new Set((songs as Song[]).map((song: Song) => song.album))].sort()
 
   useEffect(() => {
     setLocalFilters(filters)
