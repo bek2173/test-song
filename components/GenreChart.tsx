@@ -47,7 +47,7 @@ export default function GenreChart({ data }: GenreChartProps) {
           Genre Distribution
         </CardTitle>
       </CardHeader>
-      <CardContent>
+      <CardContent>  
         <div className="h-64">
           <ResponsiveContainer width="100%" height="100%">
             <PieChart>
