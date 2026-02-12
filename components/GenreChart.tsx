@@ -46,7 +46,7 @@ export default function GenreChart({ data }: GenreChartProps) {
           <Disc3 className="h-5 w-5" />
           Genre Distribution
         </CardTitle>
-      </CardHeader>
+      </CardHeader>   
       <CardContent>  
         <div className="h-64">
           <ResponsiveContainer width="100%" height="100%">
