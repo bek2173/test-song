@@ -171,7 +171,7 @@ export default function StatsDashboard() {
         </CardHeader>
         <CardContent>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {stats.songsByGenre.map(  
+            {stats.songsByGenre.map(     
               (
               genre: { genre: string; count: number },
               index: number
